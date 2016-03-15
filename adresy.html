@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="application-name" content="Fenomen internetu technologické principy historie a vývoj">
+    <meta name="author" content="Daniel Korous">
+    <meta name="generator" content="PhpStorm 8.0.1 | PsPad">
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="daniel, korous, internet, historie, socialni site, fenomen internetu, tul, manažerská informatika, informační systémy">
+    <meta name="description" content="Fenomen internetu technologické principy historie a vývoj">
+    <title>Fenomén Internetu</title>
+    <link rel="stylesheet" type="text/css" href="style/main.css"/>
+</head>
+
+<body>
+    <div class="layout">
+        <header>
+        </header>
+        <nav class="vertical">
+            <ul>
+                <li><a href="index.html">Úvodní stránka</a></li>
+                <li><a href="zakladniinformace.html">Základní informace</a></li>
+                <li><a href="zpusobypripojeni.html">Způsoby připojení </a></li>
+                <li><a href="historie.html">Historie</a></li>
+                <li><a href="adresy.html">Adresy</a></li>
+                <li><a href="vyhledavani.html">Vyhledávání</a></li>
+                <li><a href="sluzby.html">Služby</a></li>
+                <li><a href="socialnisiteatvorbawebu.html">Sociální sítě a tvorba webu</a></li>
+                <li><a class="style" href="_red/adresy.html">červená</a></li>
+            </ul>
+        </nav>
+
+
+        <section>
+            <h1>Adresy</h1>
+
+                <h2>Adresy v IPv4</h2>
+            <p>
+                V IPv4 je adresou 32bitové číslo, zapisované po jednotlivých bajtech, oddělených tečkami. Hodnoty jednotlivých bajtů se zapisují v desítkové soustavě, např.
+                192.168.48.39
+                Takových čísel existuje celkem 232 = 4 294 967 296. Určitá část adres je ovšem rezervována pro vnitřní potřeby protokolu a nemohou být přiděleny. Dále pak praktické důvody vedou k tomu, že adresy je nutno přidělovat hierarchicky, takže celý adresní prostor není možné využít beze zbytku. To vede k tomu, že v současnosti je již znatelný nedostatek IP adres, který řeší různými způsoby: dynamickým přidělováním (tzn. např. každý uživatel dial-up připojení dostane dočasnou IP adresu ve chvíli, kdy se připojí, ale jakmile se odpojí, je jeho IP adresa přidělena někomu jinému; při příštím připojení pak může tentýž uživatel dostat úplně jinou adresu), překladem adres (Network address translation) a podobně. Ke správě tohoto přidělování slouží specializované síťové protokoly, jako např. DHCP.
+                Koncepce internetu jako sítě složené ze sítí a tomu odpovídající struktura adres patří mezi novinky zavedené IP. Má velký význam pro směrování – mimo cílovou síť se směruje podle adresy sítě, a až když je IP datagram doručen do ní, začíná se brát ohled i na detailnější části adresy.
+                Původní koncept adresace nepočítal s podsítěmi, definoval jen adresu sítě a počítače. Později se však toto členění ukázalo jako příliš hrubé a lokální část adresy se rozdělila na podsíť a počítač. Obecně platí, že mezi adresami ve stejné podsíti (mají totožnou adresu sítě a podsítě) lze data dopravovat přímo – dotyční účastníci jsou všichni propojeni jedním Ethernetem či jinou lokální sítí. Jakmile se adresa cíle nachází v jiné síti, bude potřeba datagram předat příslušnému směrovači, aby jej dopravil dál – viz směrování.
+                Adresu sítě pro danou koncovou síť přiděluje poskytovatel připojení (oficiálně ji přiděluje lokální registrátor, ale tím bývá právě poskytovatel). Je třeba o ni požádat prostřednictvím standardních formulářů. Strukturu lokální části adresy – zda bude rozdělena na podsítě a jaká její část bude případně věnována adrese podsítě a jaká adrese počítače – určuje správce dotyčné sítě. Ten také přiděluje adresy.
+                Hranici mezi adresou sítě a počítače určuje tzv. maska podsítě (subnet mask). Jedná se o 32bitovou hodnotu zapisovanou stejně jako IP adresa (typickou maskou je např. 255.255.255.0). V binárním tvaru obsahuje jedničky tam, kde se v adrese nachází síť a podsíť, a nuly tam, kde je počítač. Maska podsítě je společně s IP adresou součástí základní konfigurace síťového rozhraní, často se předává protokolem DHCP.
+            </p>
+                <h2>Adresy v IPv6</h2>
+            <p>
+                Trvalejším řešením problémů s nedostatkem adres je nová verze protokolu, označovaná IPv6, která je ovšem stále využívána jen menšinou zařízení připojených k internetu. V IPv6 adresa má délku 128 bitů, což znamená, že počet možných adres je 2128 ≈ 3×1038. To je astronomicky velké číslo; pro představu: teoreticky se jedná o 6×1023 IP adres na 1 m² zemského povrchu. I pokud započítáme, že i v IPv6 je potřeba velkou část adres rezervovat a adresní prostor opět nelze dokonale využít, je těchto adres dostatek na to, aby každé zařízení připojitelné do internetu dostalo svou vlastní jedinečnou adresu.
+            </p>
+
+
+            <table>
+                <caption>Třídy IP adres</caption>
+                <tbody><tr>
+                    <th>Třída</th>
+                    <th>začátek (bin)</th>
+                    <th>1. bajt</th>
+                    <th>standardní maska</th>
+                    <th>bitů sítě</th>
+                    <th>bitů stanice</th>
+                    <th>sítí</th>
+                    <th>stanic v každé síti</th>
+                </tr>
+                <tr align="right">
+                    <td align="left"><b>A</b></td>
+                    <td align="left">0</td>
+                    <td>0–127</td>
+                    <td>255.0.0.0</td>
+                    <td>7</td>
+                    <td>24</td>
+                    <td>2<sup>7</sup> = 128</td>
+                    <td>2<sup>24</sup>−2 = 16&nbsp;777&nbsp;214</td>
+                </tr>
+                <tr align="right">
+                    <td align="left"><b>B</b></td>
+                    <td align="left">10</td>
+                    <td>128–191</td>
+                    <td>255.255.0.0</td>
+                    <td>14</td>
+                    <td>16</td>
+                    <td>2<sup>14</sup> = 16384</td>
+                    <td>2<sup>16</sup>−2 = 65&nbsp;534</td>
+                </tr>
+                <tr align="right">
+                    <td align="left"><b>C</b></td>
+                    <td align="left">110</td>
+                    <td>192–223</td>
+                    <td>255.255.255.0</td>
+                    <td>21</td>
+                    <td>8</td>
+                    <td>2<sup>21</sup> = 2&nbsp;097&nbsp;152</td>
+                    <td>2<sup>8</sup>−2 = 254</td>
+                </tr>
+                <tr>
+                    <td><b>D</b></td>
+                    <td>1110</td>
+                    <td>224–239</td>
+                    <td colspan="5" align="center"><i>multicast</i></td>
+                </tr>
+                <tr>
+                    <td><b>E</b></td>
+                    <td>1111</td>
+                    <td>240–255</td>
+                    <td colspan="5" align="center"><i>vyhrazeno jako rezerva</i></td>
+                </tr>
+                </tbody>
+            </table><br>
+            <address>Zdroj: <a href="http://cs.wikipedia.org/wiki/IP_adresa" target="_blank">http://cs.wikipedia.org/wiki/IP_adresa</a></address>
+            <address>Zdroj: <a href="http://multiedu.tul.cz/~jan.skrbek/multiedu/IS2/IS2-2015-09.pdf" target="_blank">http://multiedu.tul.cz/~jan.skrbek/multiedu/IS2/IS2-2015-09.pdf</a></address>
+        </section>
+        <footer>
+            <p style="font-size:15px">Autor webu: Daniel Korous 2015 Manažerská informatika</p>
+        </footer>
+    </div>
+</body>
+</html>
+
